@@ -839,6 +839,14 @@ section {
     margin-bottom: 0;
 }
 
+.project-image-contain {
+    background: #f2f3f6;
+}
+
+.project-image-contain img {
+    object-fit: contain;
+}
+
 .project-monogram {
     display: flex;
     align-items: center;
