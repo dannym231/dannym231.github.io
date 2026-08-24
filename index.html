@@ -127,51 +127,166 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
+
+            <!-- Featured Project: AI Agent Trust Infrastructure -->
+            <div class="featured-project">
+                <div class="featured-header">
+                    <span class="featured-label">Featured Project</span>
+                    <h3>AI Agent Trust Infrastructure + Two On-Chain Economies</h3>
+                    <p class="featured-thesis">The trust layer AI agents need to transact &mdash; identity, wallets, reputation &mdash; plus two working economies running on it, settling real crypto on-chain. Three public repos, all MIT licensed, all CI green.</p>
+                </div>
+
+                <div class="featured-stats">
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Repos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">231</span>
+                        <span class="stat-label">Tests</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Verifiable Transactions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Dependencies in SDK Core</span>
+                    </div>
+                </div>
+
+                <div class="featured-repos">
+                    <div class="repo-card">
+                        <div class="repo-card-header">
+                            <h4><a href="https://github.com/dannym231/agentcred" target="_blank">AgentCred</a></h4>
+                            <span class="repo-version">v0.2.1</span>
+                        </div>
+                        <p class="repo-role">The substrate</p>
+                        <p>SDK giving AI agents a portable identity, wallet, and reputation that follows them between applications. The core is stdlib-only with zero runtime dependencies &mdash; CI runs a dedicated no-extras job that enforces this &mdash; and chain access lives behind an optional <code>[cdp]</code> extra.</p>
+                        <div class="project-tags">
+                            <span class="tag">61 tests</span>
+                            <span class="tag">Zero-dependency core</span>
+                            <span class="tag">SDK</span>
+                        </div>
+                        <a href="https://github.com/dannym231/agentcred" target="_blank" class="repo-link"><i class="fab fa-github"></i> dannym231/agentcred</a>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-card-header">
+                            <h4><a href="https://github.com/dannym231/agentmarket" target="_blank">AgentMarket</a></h4>
+                            <span class="repo-version">v1.1.0</span>
+                        </div>
+                        <p class="repo-role">Agents cooperating</p>
+                        <p>Marketplace where AI agents post jobs, hire each other, and settle through escrow. Reputation gates hiring &mdash; bad history means rejection or posting collateral. Runs on simulated credits by default, or real testnet ETH on Base Sepolia via the same code path, with a Streamlit dashboard showing conservation checks and Basescan links.</p>
+                        <div class="project-tags">
+                            <span class="tag">134 tests</span>
+                            <span class="tag">Escrow</span>
+                            <span class="tag">Base Sepolia</span>
+                        </div>
+                        <a href="https://github.com/dannym231/agentmarket" target="_blank" class="repo-link"><i class="fab fa-github"></i> dannym231/agentmarket</a>
+                    </div>
+
+                    <div class="repo-card repo-card-contrast">
+                        <div class="repo-card-header">
+                            <h4><a href="https://github.com/dannym231/agentexchange" target="_blank">AgentExchange</a></h4>
+                            <span class="repo-version">v1.0.1</span>
+                        </div>
+                        <p class="repo-role">Agents competing &mdash; the structural contrast</p>
+                        <p>Where AgentMarket has agents cooperating, AgentExchange has them competing on the same substrate: four AI trader personalities (Momentum, Contrarian, Conservative, Degen) predict short-term ETH moves on live CoinGecko data, stake credits, and settle zero-sum. Frozen &mdash; it made its point.</p>
+                        <div class="project-tags">
+                            <span class="tag">36 tests</span>
+                            <span class="tag">Zero-sum</span>
+                            <span class="tag">Frozen</span>
+                        </div>
+                        <a href="https://github.com/dannym231/agentexchange" target="_blank" class="repo-link"><i class="fab fa-github"></i> dannym231/agentexchange</a>
+                    </div>
+                </div>
+
+                <p class="featured-architecture"><strong>Architecture:</strong> both economies import AgentCred, pinned at v0.2.1 &mdash; AgentMarket with the <code>[cdp]</code> extra, AgentExchange with the stdlib core only. &ldquo;Two economies on one substrate&rdquo; is literally true in the dependency graph.</p>
+
+                <div class="featured-proof">
+                    <h4><i class="fas fa-link"></i> On-Chain Proof</h4>
+                    <p>Six real Base Sepolia transactions covering both settlement paths &mdash; release and refund &mdash; each verifiable on Basescan:</p>
+                    <div class="proof-group">
+                        <span class="proof-phase">Phase 2</span>
+                        <div class="proof-txs">
+                            <a href="https://sepolia.basescan.org/tx/0x1a9ec6b26e33aeac10bbfc5f1bb254f40fa58e9c7fcd6f5224a4436b2e0f9272" target="_blank" class="tx-link"><span class="tx-type">funded</span> 0x1a9e&hellip;9272</a>
+                            <a href="https://sepolia.basescan.org/tx/0x29834de3c2b4ef72f73c0fceb7e240826e1bbd9881af7c8388a75df9b3e3fa21" target="_blank" class="tx-link"><span class="tx-type">released</span> 0x2983&hellip;fa21</a>
+                            <a href="https://sepolia.basescan.org/tx/0x1820e0d8597eaa67014adb64ee9dcae724728e80aa511e9c59abb3653e0a445b" target="_blank" class="tx-link"><span class="tx-type">funded</span> 0x1820&hellip;445b</a>
+                            <a href="https://sepolia.basescan.org/tx/0x0e8bf0d8396756cc6539a08560695b03f70041f39041225859ef45136e7c4a0f" target="_blank" class="tx-link"><span class="tx-type">refunded</span> 0x0e8b&hellip;4a0f</a>
+                        </div>
+                    </div>
+                    <div class="proof-group">
+                        <span class="proof-phase">Phase 5</span>
+                        <div class="proof-txs">
+                            <a href="https://sepolia.basescan.org/tx/0xce4a8d7babf475e6ec5731769fee5d4ec80dd61cd23fb9d46d0c4893247ab10a" target="_blank" class="tx-link"><span class="tx-type">funded</span> 0xce4a&hellip;b10a</a>
+                            <a href="https://sepolia.basescan.org/tx/0x25f7062be7f5a3debef3d49a5446a9d9dc4d3f5c49d5675e30c3afc9592d9d1a" target="_blank" class="tx-link"><span class="tx-type">released</span> 0x25f7&hellip;9d1a</a>
+                        </div>
+                    </div>
+                    <p class="proof-note">Conservation is checked at two layers: exact at the ledger, which must balance to zero and is asserted every run, and gas-tolerant on-chain, where the tolerance covers fees only.</p>
+                </div>
+
+                <p class="featured-limitations"><strong>Known limitations, by design:</strong> escrow is custodial &mdash; a platform-held CDP wallet rather than a smart contract, with non-custodial contract-based escrow as the named upgrade path &mdash; and everything runs on testnet, capped at 0.0001 ETH per transaction.</p>
+            </div>
+
             <div class="projects-grid">
-                <!-- Project Card 1 -->
+                <!-- Project Card: TimeLens -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="[PROJECT_IMAGE_URL_1]" alt="Project 1">
+                        <img src="assets/timelens/hero-glasses-phone.jpg" alt="Meta Ray-Ban glasses next to an iPhone running TimeLens">
                         <div class="project-overlay">
-                            <a href="[PROJECT_DEMO_URL]" class="project-link" target="_blank">
+                            <a href="timelens.html" class="project-link" aria-label="View TimeLens project page">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
-                            <a href="[PROJECT_GITHUB_URL]" class="project-link" target="_blank">
+                            <a href="https://github.com/dannym231/timeLens" class="project-link" target="_blank" aria-label="TimeLens on GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>[Project Name]</h3>
-                        <p>[Brief description of what this project does and what technologies you used]</p>
+                        <h3>TimeLens</h3>
+                        <p>An iOS app that turns POV frames from Meta Ray-Ban Gen 2 glasses into a searchable timeline of your day. Frames go to Gemini, come back as structured events, and the image is deleted immediately &mdash; no picture ever persists. A coaching layer scores deep work, distraction rate, and context switches, with events pinned to real furniture in a LiDAR room scan.</p>
                         <div class="project-tags">
-                            <span class="tag">[Tech 1]</span>
-                            <span class="tag">[Tech 2]</span>
-                            <span class="tag">[Tech 3]</span>
+                            <span class="tag">SwiftUI</span>
+                            <span class="tag">SwiftData</span>
+                            <span class="tag">RoomPlan / LiDAR</span>
+                            <span class="tag">Gemini</span>
+                            <span class="tag">Meta Wearables SDK</span>
+                            <span class="tag">iOS 17+</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="timelens.html" class="btn btn-primary btn-sm">View Project &rarr;</a>
+                            <a href="https://github.com/dannym231/timeLens" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 2 -->
+                <!-- Project Card: Stroke Outcomes & Agentic-Pipeline Evaluation -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="[PROJECT_IMAGE_URL_2]" alt="Project 2">
+                    <div class="project-image project-monogram">
+                        <span class="monogram-mark">&Delta;R&sup2;</span>
                         <div class="project-overlay">
-                            <a href="[PROJECT_DEMO_URL]" class="project-link" target="_blank">
+                            <a href="research.html" class="project-link" aria-label="View research project page">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
-                            <a href="[PROJECT_GITHUB_URL]" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
+                            <a href="assets/research/final-report.pdf" class="project-link" target="_blank" aria-label="Research report (PDF)">
+                                <i class="fas fa-file-pdf"></i>
                             </a>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>[Project Name]</h3>
-                        <p>[Brief description of what this project does and what technologies you used]</p>
+                        <h3>Stroke Outcomes &amp; Agentic-Pipeline Evaluation</h3>
+                        <p>A summer research internship at a university medical school lab: a pre-registered 52-hypothesis program testing whether brain imaging predicts stroke recovery beyond clinical variables, then a 50-run evaluation of the lab's published agentic LLM analysis pipeline. The evaluation's headline: runs that computed the right statistic got the right label only 21.4% of the time &mdash; and upgrading the model made labels worse &mdash; a study of evaluation design, not a replication.</p>
                         <div class="project-tags">
-                            <span class="tag">[Tech 1]</span>
-                            <span class="tag">[Tech 2]</span>
-                            <span class="tag">[Tech 3]</span>
+                            <span class="tag">NumPy/SciPy</span>
+                            <span class="tag">Pre-registration</span>
+                            <span class="tag">Power Analysis</span>
+                            <span class="tag">SLURM/HPC</span>
+                            <span class="tag">Local LLMs</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="research.html" class="btn btn-primary btn-sm">View Project &rarr;</a>
+                            <a href="assets/research/final-report.pdf" target="_blank" class="btn btn-secondary btn-sm"><i class="fas fa-file-pdf"></i> Report (PDF)</a>
                         </div>
                     </div>
                 </div>

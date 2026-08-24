@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Outcomes &amp; Agentic-Pipeline Evaluation | Danny McCance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="index.html">Danny McCance</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-grid">
+                <div class="project-hero-copy">
+                    <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> All Projects</a>
+                    <h1>Stroke Outcomes &amp; Agentic-Pipeline Evaluation</h1>
+                    <p class="project-hero-tagline">ISLES'24 hypothesis program + evaluation of an agentic scientific pipeline &mdash; summer research internship, university medical school lab.</p>
+                    <div class="project-tags">
+                        <span class="tag">NumPy/SciPy</span>
+                        <span class="tag">Pre-registration</span>
+                        <span class="tag">Power Analysis</span>
+                        <span class="tag">SLURM/HPC</span>
+                        <span class="tag">Local LLMs</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="assets/research/final-report.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-file-pdf"></i> Report (PDF)</a>
+                    </div>
+                </div>
+                <div class="project-hero-mark">
+                    <span class="monogram-mark">&Delta;R&sup2;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="tl-stats">
+        <div class="container">
+            <div class="featured-stats">
+                <div class="stat">
+                    <span class="stat-number">52</span>
+                    <span class="stat-label">Pre-registered Hypotheses</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Verified Positives</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50</span>
+                    <span class="stat-label">Evaluation Runs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">21.4%</span>
+                    <span class="stat-label">P(Correct Label | Correct Statistic)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Question -->
+    <section class="tl-section tl-section-alt">
+        <div class="container">
+            <h2 class="section-title">The Question</h2>
+            <div class="tl-copy">
+                <p><strong>Do brain imaging features predict how well stroke patients recover, beyond what clinical variables already tell you?</strong></p>
+                <p>The dataset is ISLES'24: roughly 129 large-vessel-occlusion stroke patients, about 97% of them successfully reperfused, with recovery measured by the 90-day modified Rankin Scale. The method is incremental R&sup2; over a clinical baseline of age plus admission NIHSS &mdash; pre-registered with a smallest effect size of interest of &Delta;R&sup2; &ge; 0.10 fixed in advance, Holm correction, NumPy/SciPy only, and every result carrying an artifact path and independently recomputed from saved design matrices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What the Science Found -->
+    <section class="tl-section">
+        <div class="container">
+            <h2 class="section-title">What the Science Found</h2>
+            <div class="tl-copy">
+                <p>Exactly two verified positives, both clinical rather than imaging: NIHSS at 24 hours (&Delta;R&sup2; = 0.257) and premorbid mRS (&Delta;R&sup2; = 0.151 &mdash; essentially a positive control). Every imaging feature nulled out once infarct volume was in the model. The explanation is the mediation thesis: lesion-intrinsic imaging features are null because infarct volume already carries their signal, and frailty features are null because age already carries theirs.</p>
+                <p>Then I tried to break my own explanation: a pre-registered falsification batch of ten hypotheses, seven of them deliberately chosen to be mediation-resistant, powered 0.85&ndash;0.96. All seven returned well-powered nulls. A follow-up made an ordered prediction about lesion location that failed on its own pre-registered terms. The thesis survived a test built to break it.</p>
+                <p>One live lead: corticospinal-tract lesion load (&Delta;R&sup2; = 0.033, correct direction, a third of the effect-size bar, dead under multiplicity). Advancing it needs an external cohort of n &ge; 152 &mdash; this one is exhausted at ~126.</p>
+            </div>
+            <div class="pullquote-card">
+                <p>One hypothesis looked like a genuine discovery &mdash; &Delta;R&sup2; = 0.108, Holm p = 0.00045 &mdash; and was killed by its own pre-registered secondary analysis, because the exposure secretly embedded infarct volume. Pre-registration caught a circular feature in real time, and the original POSITIVE label stays in the record next to its refutation rather than being retro-edited.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Evaluation Study -->
+    <section class="tl-section tl-section-alt">
+        <div class="container">
+            <h2 class="section-title">The Evaluation Study</h2>
+            <div class="tl-copy">
+                <p>The lab's analysis pipeline is <a href="https://arxiv.org/abs/2604.12144" target="_blank">VERITAS (arXiv:2604.12144)</a>, an agentic multi-phase framework in which LLM agents formulate hypotheses, write statistical code, execute it, and interpret results. Its published metrics measure whether the evidence <em>label</em> is right &mdash; they never check whether the underlying <em>number</em> is right. I measured both, against my independently verified harness: 5 hypotheses &times; 5 replicates &times; 2 model configurations = 50 runs, with the scoring instrument validated and frozen before collection began.</p>
+            </div>
+            <ul class="findings-list">
+                <li>14 of 50 runs reproduced the harness statistic, most to 15&ndash;17 significant figures. Eleven of those fourteen got the wrong label: P(correct label | correct statistic) = <strong>21.4%</strong>.</li>
+                <li><strong>19 of 50 runs (38%)</strong> carry a label and a statistic that disagree about whether the run succeeded.</li>
+                <li>Upgrading the code-writing model ~10&times; in active parameters raised statistic reproduction from <strong>8% to 48%</strong> &mdash; and dropped label accuracy from <strong>42% to 15%</strong>, below that arm's own always-guess-one-answer baseline.</li>
+                <li>Why: <strong>four defects live in deterministic Python downstream of the language model</strong>, where no amount of model scale can reach. One admits wrong answers; three reject correct ones. One gets worse with better models, because it pattern-matches on prose &mdash; and better models write richer comments.</li>
+            </ul>
+            <div class="pullquote-card">
+                <p>The single clearest case: one run reproduced the statistic to 16 significant figures, its agent correctly reasoned that the finding contradicted the hypothesis and wrote the right label &mdash; and deterministic downstream code overruled it. The model was right, and got overruled.</p>
+            </div>
+            <div class="tl-copy">
+                <p class="tl-afterword">I also logged 15 defects in my own scoring instrument, including one where it committed the exact error it was built to detect. That's in the report, not hidden.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honest Limits -->
+    <section class="tl-section">
+        <div class="container">
+            <h2 class="section-title">Honest Limits</h2>
+            <div class="limitations-card">
+                <p><strong>Single cohort, no external validation.</strong> The ~97% reperfusion rate removes much of the variance imaging features were meant to explain, and nulls at SESOI 0.10 don't exclude smaller real effects in the 0.02&ndash;0.05 band.</p>
+                <p><strong>The evaluation is pilot-scale.</strong> Every rate rests on n &le; 25, and it is a domain-transfer study &mdash; its numbers are not comparable to the paper's published benchmark, and it is a study of evaluation design, not a replication attempt.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Artifacts -->
+    <section class="tl-section tl-section-alt">
+        <div class="container">
+            <h2 class="section-title">Skills Exercised</h2>
+            <div class="tl-copy">
+                <p>Pre-registration and falsification design, power analysis, multiplicity correction, SLURM/HPC on a university cluster, local LLM deployment (Ollama, models up to 116B), building and validating a measurement instrument, and artifact-level provenance for every number.</p>
+            </div>
+            <div class="links-row">
+                <a href="assets/research/final-report.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Full Report (PDF)</a>
+                <a href="https://arxiv.org/abs/2604.12144" target="_blank" class="btn btn-secondary">Framework under study: VERITAS (arXiv:2604.12144)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Danny McCance. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/dannym231" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

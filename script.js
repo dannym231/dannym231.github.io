@@ -128,6 +128,27 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Respect prefers-reduced-motion: stop autoplaying videos and show their poster frame instead
+const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+function applyMotionPreference() {
+    document.querySelectorAll('.media-frame video').forEach(video => {
+        if (motionQuery.matches) {
+            video.removeAttribute('autoplay');
+            video.pause();
+            video.load(); // resets playback so the poster frame shows
+            video.controls = true;
+        } else {
+            video.setAttribute('autoplay', '');
+            video.controls = false;
+            video.play().catch(() => {});
+        }
+    });
+}
+
+applyMotionPreference();
+motionQuery.addEventListener('change', applyMotionPreference);
+
 // Form validation (if you add a contact form later)
 // Add your form validation logic here
 

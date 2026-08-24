@@ -12,3 +12,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.log
+
+# Claude Code local tooling
+.claude/

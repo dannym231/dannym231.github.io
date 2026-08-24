@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeLens | Danny McCance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="index.html">Danny McCance</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-grid">
+                <div class="project-hero-copy">
+                    <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> All Projects</a>
+                    <h1>TimeLens</h1>
+                    <p class="project-hero-tagline">An iOS app that turns POV frames from Meta Ray-Ban Gen 2 glasses into a searchable timeline of your day.</p>
+                    <div class="project-tags">
+                        <span class="tag">SwiftUI</span>
+                        <span class="tag">SwiftData</span>
+                        <span class="tag">RoomPlan / LiDAR</span>
+                        <span class="tag">Gemini</span>
+                        <span class="tag">Meta Wearables SDK</span>
+                        <span class="tag">iOS 17+</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/dannym231/timeLens" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-hero-media">
+                    <img src="assets/timelens/hero-glasses-phone.jpg" alt="Meta Ray-Ban glasses next to an iPhone running TimeLens">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="tl-stats">
+        <div class="container">
+            <div class="featured-stats">
+                <div class="stat">
+                    <span class="stat-number">252</span>
+                    <span class="stat-label">iOS Tests</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">$0</span>
+                    <span class="stat-label">Monthly Cost</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Image Bytes Persisted</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">~2 wks</span>
+                    <span class="stat-label">Build Time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Capture Loop -->
+    <section class="tl-section tl-section-alt">
+        <div class="container">
+            <h2 class="section-title">The Capture Loop</h2>
+            <div class="headline-media media-frame">
+                <video muted loop autoplay playsinline preload="metadata" poster="assets/timelens/capture-loop-poster.jpg">
+                    <source src="assets/timelens/capture-loop.mp4" type="video/mp4">
+                    Your browser does not support embedded video.
+                </video>
+            </div>
+            <div class="tl-copy">
+                <p>Meta Ray-Ban Gen 2 glasses capture POV frames, which are downscaled and sent to Gemini, converted into structured JSON events, and written to a SwiftData timeline &mdash; then the image is deleted immediately. The core privacy invariant is <strong>frame-to-text-then-delete: no image is ever persisted</strong>.</p>
+                <p>A coaching layer generates per-day reports scoring deep work, distraction rate, context switches, and break hygiene.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spatial Day View -->
+    <section class="tl-section">
+        <div class="container">
+            <h2 class="section-title">Spatial Day View</h2>
+            <div class="feature-grid">
+                <div class="media-frame">
+                    <img src="assets/timelens/spatial-day-view.jpg" alt="TimeLens Space screen: a 3D LiDAR room render with the day's events pinned as markers">
+                </div>
+                <div class="feature-copy">
+                    <p>A RoomPlan LiDAR scan of the room, with the day's events pinned to real furniture and rendered in SceneKit. Tapping a marker jumps to that moment in the Timeline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ask Your Day -->
+    <section class="tl-section tl-section-alt">
+        <div class="container">
+            <h2 class="section-title">Ask Your Day</h2>
+            <div class="feature-grid feature-grid-reverse">
+                <div class="feature-copy">
+                    <p>On-device NLEmbedding retrieval answers natural-language questions about the day, with tappable timestamp chips that jump straight to the source event.</p>
+                </div>
+                <div class="media-frame">
+                    <video muted loop autoplay playsinline preload="metadata" poster="assets/timelens/ask-your-day-poster.jpg">
+                        <source src="assets/timelens/ask-your-day.mp4" type="video/mp4">
+                        Your browser does not support embedded video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Day Report -->
+    <section class="tl-section">
+        <div class="container">
+            <h2 class="section-title">The Day Report</h2>
+            <div class="screenshot-pair">
+                <div class="media-frame">
+                    <img src="assets/timelens/day-report.jpg" alt="TimeLens Report screen: deep work, distraction rate, context switches, break hygiene, and a Coach's Summary">
+                </div>
+                <div class="media-frame">
+                    <img src="assets/timelens/trends.jpg" alt="TimeLens Trends screen: weekly bars, streaks, and a 14-day deep-work sparkline">
+                </div>
+            </div>
+            <div class="tl-copy">
+                <p>Each day gets a generated report scoring deep work, distraction rate, context switches, and break hygiene, with a short written summary. Trends tracks the same metrics across 14 days with sparklines, deltas, and streaks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Running at Zero Cost -->
+    <section class="tl-section tl-section-alt">
+        <div class="container">
+            <h2 class="section-title">Running at Zero Cost</h2>
+            <div class="tl-copy">
+                <p>The app runs at <strong>$0/month</strong> on the Gemini free tier via multi-pool quota routing: pinned model IDs, per-pool budgets, RPM pacing, and 429 handling.</p>
+                <p>Beyond the coaching reports, TimeLens ships a day-centric Timeline with day sections, Trends with 14-day sparklines, deltas, and streaks, and home-screen widgets.</p>
+                <p>The stack is SwiftUI, SwiftData, async/await, and iOS 17+, with the Meta Wearables DAT SDK 0.8.0 &mdash; no third-party dependencies beyond that one SDK.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Known Limitations -->
+    <section class="tl-section">
+        <div class="container">
+            <h2 class="section-title">Known Limitations, by Design</h2>
+            <div class="limitations-card">
+                <p><strong>On-device inference does not ship.</strong> Settings includes a Vision Engine picker with an &ldquo;On-Device&rdquo; option labeled &ldquo;Preview &mdash; requires iOS 27. Frames continue to use Cloud (Gemini).&rdquo; The seam is built and tested, but no inference runtime ships &mdash; every frame is processed in the cloud by Gemini.</p>
+                <p><strong>Demo dataset.</strong> Footage on this page uses the seeded 14-day demo dataset, not real logged days.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Danny McCance. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/dannym231" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
