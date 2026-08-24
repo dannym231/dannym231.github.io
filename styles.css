@@ -347,7 +347,7 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
@@ -448,42 +448,7 @@ section {
     font-weight: 500;
 }
 
-/* ===== Featured Project ===== */
-.featured-project {
-    background: var(--bg-alt);
-    border-radius: 10px;
-    border-left: 4px solid var(--primary-color);
-    box-shadow: var(--shadow);
-    padding: 40px;
-    margin-bottom: 50px;
-}
-
-.featured-label {
-    display: inline-block;
-    padding: 5px 15px;
-    background: var(--primary-color);
-    color: white;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-.featured-header h3 {
-    font-size: 1.8rem;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
-.featured-thesis {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    max-width: 800px;
-    line-height: 1.7;
-}
-
+/* ===== Featured Stats & Repo Cards (agents.html) ===== */
 .featured-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -608,19 +573,6 @@ section {
     color: var(--primary-color);
 }
 
-.featured-architecture {
-    color: var(--text-color);
-    line-height: 1.7;
-    margin-bottom: 30px;
-}
-
-.featured-architecture code {
-    background: var(--bg-color);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
-}
-
 .featured-proof {
     background: var(--bg-color);
     border-radius: 10px;
@@ -708,14 +660,6 @@ section {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-top: 10px;
-}
-
-.featured-limitations {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    line-height: 1.7;
-    padding-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* ===== Project Card Actions ===== */
@@ -866,6 +810,13 @@ section {
 
 .tl-copy p:last-child {
     margin-bottom: 0;
+}
+
+.tl-copy code {
+    background: var(--bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
 }
 
 .feature-grid {
@@ -1216,8 +1167,8 @@ section {
         text-align: center;
     }
 
-    .featured-project {
-        padding: 25px;
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .project-hero {
@@ -1249,10 +1200,6 @@ section {
     .pullquote-card,
     .limitations-card {
         padding: 22px;
-    }
-
-    .featured-header h3 {
-        font-size: 1.5rem;
     }
 
     .proof-group {

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Trust Infrastructure | Danny McCance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="index.html">Danny McCance</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-grid">
+                <div class="project-hero-copy">
+                    <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> All Projects</a>
+                    <h1>AI Agent Trust Infrastructure + Two On-Chain Economies</h1>
+                    <p class="project-hero-tagline">The trust layer AI agents need to transact &mdash; identity, wallets, reputation &mdash; plus two working economies running on it, settling real crypto on-chain. Three public repos, all MIT licensed, all CI green.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Base Sepolia</span>
+                        <span class="tag">Coinbase CDP</span>
+                        <span class="tag">Streamlit</span>
+                        <span class="tag">MIT</span>
+                    </div>
+                </div>
+                <div class="project-hero-mark">
+                    <span class="monogram-mark">0x</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="tl-stats">
+        <div class="container">
+            <div class="featured-stats">
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Repos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">231</span>
+                    <span class="stat-label">Tests</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Verifiable Transactions</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Dependencies in SDK Core</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Three Repos -->
+    <section class="tl-section tl-section-alt">
+        <div class="container">
+            <h2 class="section-title">The Three Repos</h2>
+            <div class="featured-repos">
+                <div class="repo-card">
+                    <div class="repo-card-header">
+                        <h4><a href="https://github.com/dannym231/agentcred" target="_blank">AgentCred</a></h4>
+                        <span class="repo-version">v0.2.1</span>
+                    </div>
+                    <p class="repo-role">The substrate</p>
+                    <p>SDK giving AI agents a portable identity, wallet, and reputation that follows them between applications. The core is stdlib-only with zero runtime dependencies &mdash; CI runs a dedicated no-extras job that enforces this &mdash; and chain access lives behind an optional <code>[cdp]</code> extra.</p>
+                    <div class="project-tags">
+                        <span class="tag">61 tests</span>
+                        <span class="tag">Zero-dependency core</span>
+                        <span class="tag">SDK</span>
+                    </div>
+                    <a href="https://github.com/dannym231/agentcred" target="_blank" class="repo-link"><i class="fab fa-github"></i> dannym231/agentcred</a>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-card-header">
+                        <h4><a href="https://github.com/dannym231/agentmarket" target="_blank">AgentMarket</a></h4>
+                        <span class="repo-version">v1.1.0</span>
+                    </div>
+                    <p class="repo-role">Agents cooperating</p>
+                    <p>Marketplace where AI agents post jobs, hire each other, and settle through escrow. Reputation gates hiring &mdash; bad history means rejection or posting collateral. Runs on simulated credits by default, or real testnet ETH on Base Sepolia via the same code path, with a Streamlit dashboard showing conservation checks and Basescan links.</p>
+                    <div class="project-tags">
+                        <span class="tag">134 tests</span>
+                        <span class="tag">Escrow</span>
+                        <span class="tag">Base Sepolia</span>
+                    </div>
+                    <a href="https://github.com/dannym231/agentmarket" target="_blank" class="repo-link"><i class="fab fa-github"></i> dannym231/agentmarket</a>
+                </div>
+
+                <div class="repo-card repo-card-contrast">
+                    <div class="repo-card-header">
+                        <h4><a href="https://github.com/dannym231/agentexchange" target="_blank">AgentExchange</a></h4>
+                        <span class="repo-version">v1.0.1</span>
+                    </div>
+                    <p class="repo-role">Agents competing &mdash; the structural contrast</p>
+                    <p>Where AgentMarket has agents cooperating, AgentExchange has them competing on the same substrate: four AI trader personalities (Momentum, Contrarian, Conservative, Degen) predict short-term ETH moves on live CoinGecko data, stake credits, and settle zero-sum. Frozen &mdash; it made its point.</p>
+                    <div class="project-tags">
+                        <span class="tag">36 tests</span>
+                        <span class="tag">Zero-sum</span>
+                        <span class="tag">Frozen</span>
+                    </div>
+                    <a href="https://github.com/dannym231/agentexchange" target="_blank" class="repo-link"><i class="fab fa-github"></i> dannym231/agentexchange</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="tl-section">
+        <div class="container">
+            <h2 class="section-title">Architecture</h2>
+            <div class="tl-copy">
+                <p>Both economies import AgentCred, pinned at v0.2.1 &mdash; AgentMarket with the <code>[cdp]</code> extra, AgentExchange with the stdlib core only. &ldquo;Two economies on one substrate&rdquo; is literally true in the dependency graph.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- On-Chain Proof -->
+    <section class="tl-section tl-section-alt">
+        <div class="container">
+            <div class="featured-proof">
+                <h4><i class="fas fa-link"></i> On-Chain Proof</h4>
+                <p>Six real Base Sepolia transactions covering both settlement paths &mdash; release and refund &mdash; each verifiable on Basescan:</p>
+                <div class="proof-group">
+                    <span class="proof-phase">Phase 2</span>
+                    <div class="proof-txs">
+                        <a href="https://sepolia.basescan.org/tx/0x1a9ec6b26e33aeac10bbfc5f1bb254f40fa58e9c7fcd6f5224a4436b2e0f9272" target="_blank" class="tx-link"><span class="tx-type">funded</span> 0x1a9e&hellip;9272</a>
+                        <a href="https://sepolia.basescan.org/tx/0x29834de3c2b4ef72f73c0fceb7e240826e1bbd9881af7c8388a75df9b3e3fa21" target="_blank" class="tx-link"><span class="tx-type">released</span> 0x2983&hellip;fa21</a>
+                        <a href="https://sepolia.basescan.org/tx/0x1820e0d8597eaa67014adb64ee9dcae724728e80aa511e9c59abb3653e0a445b" target="_blank" class="tx-link"><span class="tx-type">funded</span> 0x1820&hellip;445b</a>
+                        <a href="https://sepolia.basescan.org/tx/0x0e8bf0d8396756cc6539a08560695b03f70041f39041225859ef45136e7c4a0f" target="_blank" class="tx-link"><span class="tx-type">refunded</span> 0x0e8b&hellip;4a0f</a>
+                    </div>
+                </div>
+                <div class="proof-group">
+                    <span class="proof-phase">Phase 5</span>
+                    <div class="proof-txs">
+                        <a href="https://sepolia.basescan.org/tx/0xce4a8d7babf475e6ec5731769fee5d4ec80dd61cd23fb9d46d0c4893247ab10a" target="_blank" class="tx-link"><span class="tx-type">funded</span> 0xce4a&hellip;b10a</a>
+                        <a href="https://sepolia.basescan.org/tx/0x25f7062be7f5a3debef3d49a5446a9d9dc4d3f5c49d5675e30c3afc9592d9d1a" target="_blank" class="tx-link"><span class="tx-type">released</span> 0x25f7&hellip;9d1a</a>
+                    </div>
+                </div>
+                <p class="proof-note">Conservation is checked at two layers: exact at the ledger, which must balance to zero and is asserted every run, and gas-tolerant on-chain, where the tolerance covers fees only.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Known Limitations -->
+    <section class="tl-section">
+        <div class="container">
+            <h2 class="section-title">Known Limitations, by Design</h2>
+            <div class="limitations-card">
+                <p><strong>Escrow is custodial.</strong> A platform-held CDP wallet rather than a smart contract, with non-custodial contract-based escrow as the named upgrade path.</p>
+                <p><strong>Testnet only.</strong> Everything runs on testnet, capped at 0.0001 ETH per transaction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Danny McCance. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/dannym231" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/danny-mccance-0ab602261" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:mccancedanny1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
