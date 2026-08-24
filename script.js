@@ -87,25 +87,6 @@ document.querySelectorAll('.skill-category').forEach((category, index) => {
     observer.observe(category);
 });
 
-// Typing effect for hero section (optional - you can customize or remove)
-const heroText = document.querySelector('.hero h1');
-if (heroText) {
-    const originalText = heroText.innerHTML;
-    heroText.innerHTML = '';
-    let i = 0;
-
-    function typeWriter() {
-        if (i < originalText.length) {
-            heroText.innerHTML += originalText.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
-        }
-    }
-
-    // Uncomment the line below to enable typing effect
-    // typeWriter();
-}
-
 // Active navigation link on scroll
 const sections = document.querySelectorAll('section[id]');
 
