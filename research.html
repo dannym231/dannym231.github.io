@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stroke Outcomes &amp; Agentic-Pipeline Evaluation | Danny McCance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -80,6 +83,7 @@
     <!-- The Question -->
     <section class="tl-section tl-section-alt">
         <div class="container">
+            <p class="kicker">01 — Question</p>
             <h2 class="section-title">The Question</h2>
             <div class="tl-copy">
                 <p><strong>Do brain imaging features predict how well stroke patients recover, beyond what clinical variables already tell you?</strong></p>
@@ -91,6 +95,7 @@
     <!-- What the Science Found -->
     <section class="tl-section">
         <div class="container">
+            <p class="kicker">02 — Findings</p>
             <h2 class="section-title">What the Science Found</h2>
             <div class="tl-copy">
                 <p>Exactly two verified positives, both clinical rather than imaging: NIHSS at 24 hours (&Delta;R&sup2; = 0.257) and premorbid mRS (&Delta;R&sup2; = 0.151 &mdash; essentially a positive control). Every imaging feature nulled out once infarct volume was in the model. The explanation is the mediation thesis: lesion-intrinsic imaging features are null because infarct volume already carries their signal, and frailty features are null because age already carries theirs.</p>
@@ -106,6 +111,7 @@
     <!-- The Evaluation Study -->
     <section class="tl-section tl-section-alt">
         <div class="container">
+            <p class="kicker">03 — Evaluation</p>
             <h2 class="section-title">The Evaluation Study</h2>
             <div class="tl-copy">
                 <p>The lab's analysis pipeline is <a href="https://arxiv.org/abs/2604.12144" target="_blank">VERITAS (arXiv:2604.12144)</a>, an agentic multi-phase framework in which LLM agents formulate hypotheses, write statistical code, execute it, and interpret results. Its published metrics measure whether the evidence <em>label</em> is right &mdash; they never check whether the underlying <em>number</em> is right. I measured both, against my independently verified harness: 5 hypotheses &times; 5 replicates &times; 2 model configurations = 50 runs, with the scoring instrument validated and frozen before collection began.</p>
@@ -128,6 +134,7 @@
     <!-- Honest Limits -->
     <section class="tl-section">
         <div class="container">
+            <p class="kicker">04 — Limits</p>
             <h2 class="section-title">Honest Limits</h2>
             <div class="limitations-card">
                 <p><strong>Single cohort, no external validation.</strong> The ~97% reperfusion rate removes much of the variance imaging features were meant to explain, and nulls at SESOI 0.10 don't exclude smaller real effects in the 0.02&ndash;0.05 band.</p>
@@ -139,6 +146,7 @@
     <!-- Skills & Artifacts -->
     <section class="tl-section tl-section-alt">
         <div class="container">
+            <p class="kicker">05 — Toolkit</p>
             <h2 class="section-title">Skills Exercised</h2>
             <div class="tl-copy">
                 <p>Pre-registration and falsification design, power analysis, multiplicity correction, SLURM/HPC on a university cluster, local LLM deployment (Ollama, models up to 116B), building and validating a measurement instrument, and artifact-level provenance for every number.</p>
@@ -153,7 +161,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Danny McCance. All rights reserved.</p>
+            <p>&copy; 2026 Danny McCance. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://github.com/dannym231" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/danny-mccance-0ab602261" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
