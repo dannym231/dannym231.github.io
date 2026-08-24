@@ -438,12 +438,6 @@ section {
     object-fit: contain;
 }
 
-.project-monogram {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .monogram-mark {
     font-family: var(--font-head);
     font-size: 3rem;
