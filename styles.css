@@ -175,6 +175,16 @@ section {
     text-align: center;
 }
 
+.hero-headshot {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    display: block;
+    margin: 0 auto 28px;
+}
+
 .hero h1 {
     font-size: 3.4rem;
     margin-bottom: 14px;
@@ -1123,6 +1133,14 @@ section {
 }
 
 /* ===== Responsive Design ===== */
+@media (max-width: 1000px) and (min-width: 769px) {
+    .nav-menu {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
