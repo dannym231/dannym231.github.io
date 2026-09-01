@@ -92,7 +92,7 @@
             <h2 class="section-title">The Question</h2>
             <div class="tl-copy">
                 <p><strong>Do brain imaging features predict how well stroke patients recover, beyond what clinical variables already tell you?</strong></p>
-                <p>The dataset is ISLES'24: 129 enrolled large-vessel-occlusion stroke patients, 126 analyzed, about 97% of them successfully reperfused, with recovery measured by the 90-day modified Rankin Scale. The method is incremental R&sup2; over a clinical baseline of age plus admission NIHSS &mdash; pre-registered with a smallest effect size of interest of &Delta;R&sup2; &ge; 0.10 fixed in advance, Holm&ndash;Bonferroni correction, NumPy/SciPy only, and every result carrying an artifact path and independently recomputed from saved design matrices.</p>
+                <p>The dataset is ISLES'24: 129 enrolled large-vessel-occlusion stroke patients, 126 analyzed, about 97% of them successfully reperfused, with recovery measured by the 90-day modified Rankin Scale. The method is incremental R&sup2; over a clinical baseline of age plus admission NIHSS &mdash; pre-registered with a smallest effect size of interest of &Delta;R&sup2; &ge; 0.10 fixed in advance, multiplicity correction, NumPy/SciPy only, and every result carrying an artifact path and independently recomputed from saved design matrices.</p>
             </div>
         </div>
     </section>
@@ -108,7 +108,7 @@
                 <p>One live lead: corticospinal-tract lesion load (&Delta;R&sup2; = 0.033, correct direction, a third of the effect-size bar, dead under multiplicity). Advancing it needs an external cohort of n &ge; 152 &mdash; this one is exhausted at 126 analyzed of 129 enrolled.</p>
             </div>
             <div class="pullquote-card">
-                <p>One hypothesis looked like a genuine discovery &mdash; &Delta;R&sup2; = 0.108, Holm&ndash;Bonferroni p = 0.00045 &mdash; and was killed by its own pre-registered secondary analysis, because the exposure secretly embedded infarct volume. Pre-registration caught a circular feature in real time, and the original POSITIVE label stays in the record next to its refutation rather than being retro-edited.</p>
+                <p>One hypothesis looked like a genuine discovery &mdash; &Delta;R&sup2; = 0.108, adjusted p = 0.00045 &mdash; and was killed by its own pre-registered secondary analysis, because the exposure secretly embedded infarct volume. Pre-registration caught a circular feature in real time, and the original POSITIVE label stays in the record next to its refutation rather than being retro-edited.</p>
             </div>
         </div>
     </section>
