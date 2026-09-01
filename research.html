@@ -42,7 +42,7 @@
                 <div class="project-hero-copy">
                     <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> All Projects</a>
                     <h1>Stroke Outcomes &amp; Agentic-Pipeline Evaluation</h1>
-                    <p class="project-hero-tagline">ISLES'24 hypothesis program + evaluation of an agentic scientific pipeline &mdash; summer research internship, university medical school lab.</p>
+                    <p class="project-hero-tagline">ISLES'24 hypothesis program + evaluation of an agentic scientific pipeline &mdash; research internship, Paetzold Lab, Weill Cornell Medicine / Cornell Tech.</p>
                     <div class="project-tags">
                         <span class="tag">NumPy/SciPy</span>
                         <span class="tag">Pre-registration</span>
@@ -92,7 +92,7 @@
             <h2 class="section-title">The Question</h2>
             <div class="tl-copy">
                 <p><strong>Do brain imaging features predict how well stroke patients recover, beyond what clinical variables already tell you?</strong></p>
-                <p>The dataset is ISLES'24: roughly 129 large-vessel-occlusion stroke patients, about 97% of them successfully reperfused, with recovery measured by the 90-day modified Rankin Scale. The method is incremental R&sup2; over a clinical baseline of age plus admission NIHSS &mdash; pre-registered with a smallest effect size of interest of &Delta;R&sup2; &ge; 0.10 fixed in advance, Holm correction, NumPy/SciPy only, and every result carrying an artifact path and independently recomputed from saved design matrices.</p>
+                <p>The dataset is ISLES'24: 129 enrolled large-vessel-occlusion stroke patients, 126 analyzed, about 97% of them successfully reperfused, with recovery measured by the 90-day modified Rankin Scale. The method is incremental R&sup2; over a clinical baseline of age plus admission NIHSS &mdash; pre-registered with a smallest effect size of interest of &Delta;R&sup2; &ge; 0.10 fixed in advance, Holm&ndash;Bonferroni correction, NumPy/SciPy only, and every result carrying an artifact path and independently recomputed from saved design matrices.</p>
             </div>
         </div>
     </section>
@@ -105,10 +105,10 @@
             <div class="tl-copy">
                 <p>Exactly two verified positives, both clinical rather than imaging: NIHSS at 24 hours (&Delta;R&sup2; = 0.257) and premorbid mRS (&Delta;R&sup2; = 0.151 &mdash; essentially a positive control). Every imaging feature nulled out once infarct volume was in the model. The explanation is the mediation thesis: lesion-intrinsic imaging features are null because infarct volume already carries their signal, and frailty features are null because age already carries theirs.</p>
                 <p>Then I tried to break my own explanation: a pre-registered falsification batch of ten hypotheses, seven of them deliberately chosen to be mediation-resistant, powered 0.85&ndash;0.96. All seven returned well-powered nulls. A follow-up made an ordered prediction about lesion location that failed on its own pre-registered terms. The thesis survived a test built to break it.</p>
-                <p>One live lead: corticospinal-tract lesion load (&Delta;R&sup2; = 0.033, correct direction, a third of the effect-size bar, dead under multiplicity). Advancing it needs an external cohort of n &ge; 152 &mdash; this one is exhausted at ~126.</p>
+                <p>One live lead: corticospinal-tract lesion load (&Delta;R&sup2; = 0.033, correct direction, a third of the effect-size bar, dead under multiplicity). Advancing it needs an external cohort of n &ge; 152 &mdash; this one is exhausted at 126 analyzed of 129 enrolled.</p>
             </div>
             <div class="pullquote-card">
-                <p>One hypothesis looked like a genuine discovery &mdash; &Delta;R&sup2; = 0.108, Holm p = 0.00045 &mdash; and was killed by its own pre-registered secondary analysis, because the exposure secretly embedded infarct volume. Pre-registration caught a circular feature in real time, and the original POSITIVE label stays in the record next to its refutation rather than being retro-edited.</p>
+                <p>One hypothesis looked like a genuine discovery &mdash; &Delta;R&sup2; = 0.108, Holm&ndash;Bonferroni p = 0.00045 &mdash; and was killed by its own pre-registered secondary analysis, because the exposure secretly embedded infarct volume. Pre-registration caught a circular feature in real time, and the original POSITIVE label stays in the record next to its refutation rather than being retro-edited.</p>
             </div>
         </div>
     </section>
@@ -120,6 +120,7 @@
             <h2 class="section-title">The Evaluation Study</h2>
             <div class="tl-copy">
                 <p>The lab's analysis pipeline is <a href="https://arxiv.org/abs/2604.12144" target="_blank">VERITAS (arXiv:2604.12144)</a>, an agentic multi-phase framework in which LLM agents formulate hypotheses, write statistical code, execute it, and interpret results. Its published metrics measure whether the evidence <em>label</em> is right &mdash; they never check whether the underlying <em>number</em> is right. I measured both, against my independently verified harness: 5 hypotheses &times; 5 replicates &times; 2 model configurations = 50 runs, with the scoring instrument validated and frozen before collection began.</p>
+                <p>I also migrated the pipeline off paid APIs onto self-hosted open-source models via Ollama on SLURM/Linux HPC, cutting inference spend by roughly $1,000/month.</p>
             </div>
             <ul class="findings-list">
                 <li>14 of 50 runs reproduced the harness statistic, most to 15&ndash;17 significant figures. Eleven of those fourteen got the wrong label: P(correct label | correct statistic) = <strong>21.4%</strong>.</li>
@@ -169,7 +170,7 @@
             <p>&copy; 2026 Danny McCance. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://github.com/dannym231" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/danny-mccance-0ab602261" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/danny-mccance/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:mccancedanny1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>

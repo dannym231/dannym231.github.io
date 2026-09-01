@@ -48,7 +48,7 @@
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/dannym231" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/danny-mccance-0ab602261" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/danny-mccance/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="mailto:mccancedanny1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     <a href="assets/resume/danny-mccance-resume.pdf" target="_blank" aria-label="Resume"><i class="fas fa-file-alt"></i></a>
                 </div>
@@ -69,7 +69,7 @@
                         <div class="education-item">
                             <h4>Cornell University, College of Engineering</h4>
                             <p>BS Computer Science &amp; Electrical and Computer Engineering</p>
-                            <p class="date">Expected May 2028 &bull; GPA: 3.9</p>
+                            <p class="date">Expected May 2028 &bull; GPA: 3.90/4.00</p>
                         </div>
                     </div>
                 </div>
@@ -86,10 +86,11 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Research Intern &mdash; Computational Stroke Imaging</h3>
-                        <h4>University medical school lab</h4>
+                        <h3>Research Intern</h3>
+                        <h4>Paetzold Lab, Weill Cornell Medicine / Cornell Tech</h4>
                         <p class="date">Apr 2026 &ndash; Present</p>
                         <ul>
+                            <li>Migrated VERITAS, the lab's multi-agent LLM research pipeline, from paid APIs to self-hosted open-source models via Ollama on SLURM/Linux HPC, cutting inference spend ~$1,000/month.</li>
                             <li>Pre-registered hypothesis program on stroke outcome prediction (power analysis, multiplicity correction, SLURM/HPC) and a 50-run evaluation of the lab's agentic LLM analysis pipeline.</li>
                         </ul>
                     </div>
@@ -126,19 +127,8 @@
                         <h4>Paragon Global Investments</h4>
                         <p class="date">Sept 2025 &ndash; Present</p>
                         <ul>
-                            <li>Built a data pipeline and residual momentum signal for a 49-industry equity strategy using rolling Fama-French factor regressions.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Engineering Subteam Lead</h3>
-                        <h4>Cornell Blockchain Club</h4>
-                        <p class="date">Sept 2025 &ndash; Present</p>
-                        <ul>
-                            <li>Lead engineers prototyping blockchain applications, including an autonomous multi-agent system where AI agents hold on-chain wallets, identity, and reputation.</li>
+                            <li>Researched residual-momentum alpha across 49 industry portfolios using rolling Fama-French time-series regressions in Python; neutralized market, size, and value exposures and backtested return persistence.</li>
+                            <li>Built a two-venue market-data pipeline for Kalshi and Polymarket capturing 24M+ order-book rows via tiered polling and hysteresis-stabilized market selection, sustaining a 0.04% error rate.</li>
                         </ul>
                     </div>
                 </div>
@@ -148,9 +138,10 @@
                     <div class="timeline-content">
                         <h3>Machine Learning Engineer Intern</h3>
                         <h4>OON Systems</h4>
-                        <p class="date">June 2025 &ndash; Present</p>
+                        <p class="date">Sept 2025 &ndash; Aug 2026</p>
                         <ul>
-                            <li>Fine-tuned and deployed LLMs (RunPod, Ollama) for autonomous agents automating healthcare workflows; built Python data pipelines for large heterogeneous datasets.</li>
+                            <li>Fine-tuned and deployed open-source LLMs with RunPod and Ollama to power AI agents automating healthcare back-office workflows, including email triage, billing-code generation, and claim routing.</li>
+                            <li>Built a HIPAA-compliant web service for protected health information, feeding billing-optimization models across clinic workflows.</li>
                         </ul>
                     </div>
                 </div>
@@ -191,7 +182,7 @@
                     </div>
                     <div class="project-info">
                         <h3>Stroke Outcomes &amp; Agentic-Pipeline Evaluation</h3>
-                        <p>A summer research internship at a university medical school lab: a pre-registered 52-hypothesis program testing whether brain imaging predicts stroke recovery beyond clinical variables, then a 50-run evaluation of the lab's published agentic LLM analysis pipeline. The evaluation's headline: runs that computed the right statistic got the right label only 21.4% of the time &mdash; and upgrading the model made labels worse &mdash; a study of evaluation design, not a replication.</p>
+                        <p>A research internship at the Paetzold Lab, Weill Cornell Medicine / Cornell Tech: a pre-registered 52-hypothesis program testing whether brain imaging predicts stroke recovery beyond clinical variables, then a 50-run evaluation of the lab's published agentic LLM analysis pipeline. The evaluation's headline: runs that computed the right statistic got the right label only 21.4% of the time &mdash; and upgrading the model made labels worse &mdash; a study of evaluation design, not a replication.</p>
                         <div class="project-tags">
                             <span class="tag">NumPy/SciPy</span>
                             <span class="tag">Pre-registration</span>
@@ -224,7 +215,7 @@
                     </div>
                     <div class="project-info">
                         <h3>Resell &mdash; Cornell Marketplace</h3>
-                        <p>Cornell AppDev's campus marketplace app for student buyers and sellers, live on the App Store and Google Play with 150 monthly users. The Android client is built in Kotlin and Jetpack Compose by a student team; I develop on the Android side, where I built the availability-scheduling flow &mdash; the calendar picker and availability sheet buyers and sellers use to coordinate meetups.</p>
+                        <p>Cornell AppDev's campus marketplace app for student buyers and sellers, live on the App Store and Google Play with 150 monthly users. The Android client is built in Kotlin and Jetpack Compose by a student team; I developed on the Android side, where I built the availability-scheduling flow &mdash; the calendar picker and availability sheet buyers and sellers use to coordinate meetups.</p>
                         <div class="project-tags">
                             <span class="tag">Kotlin</span>
                             <span class="tag">Jetpack Compose</span>
@@ -285,8 +276,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>AI Agent Trust Infrastructure</h3>
-                        <p>The trust layer AI agents need to transact &mdash; identity, wallets, reputation &mdash; plus two working economies running on it, settling real crypto on-chain. Three MIT-licensed repos, 231 tests, and six Base Sepolia transactions, each independently verifiable on Basescan.</p>
+                        <h3>AI Agent Trust Infrastructure &mdash; Cornell Blockchain, Engineering Subteam Lead</h3>
+                        <p>The trust layer AI agents need to transact &mdash; identity, wallets, reputation &mdash; plus two working economies running on it, settling real crypto on-chain. Three MIT-licensed repos &mdash; AgentCred, AgentMarket, and AgentExchange &mdash; with 231 tests and six Base Sepolia transactions, each independently verifiable on Basescan.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Base Sepolia</span>
@@ -297,6 +288,40 @@
                         <div class="project-actions">
                             <a href="agents.html" class="btn btn-primary btn-sm">View Project &rarr;</a>
                             <a href="https://github.com/dannym231/agentmarket" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card: Residual-Momentum Alpha (PLACEHOLDER IMAGE: drop equity curve / tearsheet at assets/paragon/equity-curve.jpg) -->
+                <div class="project-card">
+                    <div class="project-image project-image-contain">
+                        <img src="assets/paragon/equity-curve.jpg" alt="Equity curve for the residual-momentum industry strategy" onerror="this.style.display='none'">
+                    </div>
+                    <div class="project-info">
+                        <h3>Residual-Momentum Alpha</h3>
+                        <p>Quantitative research at Paragon Global Investments: residual-momentum alpha across 49 industry portfolios, built with rolling Fama-French time-series regressions in Python. Market, size, and value exposures are neutralized, and return persistence is backtested.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Fama-French</span>
+                            <span class="tag">Residual Momentum</span>
+                            <span class="tag">Backtesting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card: Market-Data Pipeline (PLACEHOLDER IMAGE: drop a chart at assets/paragon/market-data-pipeline.jpg) -->
+                <div class="project-card">
+                    <div class="project-image project-image-contain">
+                        <img src="assets/paragon/market-data-pipeline.jpg" alt="Order-book capture pipeline for Kalshi and Polymarket" onerror="this.style.display='none'">
+                    </div>
+                    <div class="project-info">
+                        <h3>Two-Venue Market-Data Pipeline</h3>
+                        <p>A large-scale market-data pipeline at Paragon Global Investments capturing 24M+ order-book rows across two prediction-market venues, Kalshi and Polymarket. Tiered polling and hysteresis-stabilized market selection hold it to a 0.04% error rate.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Kalshi</span>
+                            <span class="tag">Polymarket</span>
+                            <span class="tag">Order-Book Data</span>
                         </div>
                     </div>
                 </div>
@@ -319,6 +344,7 @@
                         <span class="skill-tag">Kotlin</span>
                         <span class="skill-tag">Swift</span>
                         <span class="skill-tag">R</span>
+                        <span class="skill-tag">OCaml</span>
                     </div>
                 </div>
 
@@ -328,6 +354,8 @@
                         <span class="skill-tag">PyTorch</span>
                         <span class="skill-tag">scikit-learn</span>
                         <span class="skill-tag">NumPy/SciPy</span>
+                        <span class="skill-tag">pandas</span>
+                        <span class="skill-tag">statsmodels</span>
                     </div>
                 </div>
 
@@ -342,10 +370,14 @@
                 <div class="skill-category">
                     <h3><i class="fas fa-tools"></i> Infra / Tools</h3>
                     <div class="skill-tags">
+                        <span class="skill-tag">Linux</span>
                         <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
                         <span class="skill-tag">SLURM/HPC</span>
                         <span class="skill-tag">Firebase</span>
                         <span class="skill-tag">Ollama</span>
+                        <span class="skill-tag">RunPod</span>
                     </div>
                 </div>
             </div>
@@ -364,7 +396,7 @@
                     <h3>Email</h3>
                     <p>mccancedanny1@gmail.com</p>
                 </a>
-                <a href="https://www.linkedin.com/in/danny-mccance-0ab602261" target="_blank" class="contact-card">
+                <a href="https://www.linkedin.com/in/danny-mccance/" target="_blank" class="contact-card">
                     <i class="fab fa-linkedin"></i>
                     <h3>LinkedIn</h3>
                     <p>Connect with me</p>
@@ -384,7 +416,7 @@
             <p>&copy; 2026 Danny McCance. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://github.com/dannym231" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/danny-mccance-0ab602261" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/danny-mccance/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:mccancedanny1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
